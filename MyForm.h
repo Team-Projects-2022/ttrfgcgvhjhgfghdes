@@ -35,13 +35,18 @@ namespace Project18 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::PictureBox^  trivagologof;
+	protected:
+
+	protected:
+
 
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::TextBox^  textBox2;
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  LoginButton;
+
 	private: System::Windows::Forms::Button^  Admin;
 
 	protected:
@@ -60,28 +65,28 @@ namespace Project18 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->trivagologof = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->LoginButton = (gcnew System::Windows::Forms::Button());
 			this->Admin = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trivagologof))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// pictureBox1
+			// trivagologof
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(190, 70);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(0);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(522, 103);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
+			this->trivagologof->BackColor = System::Drawing::Color::Transparent;
+			this->trivagologof->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"trivagologof.Image")));
+			this->trivagologof->Location = System::Drawing::Point(190, 70);
+			this->trivagologof->Margin = System::Windows::Forms::Padding(0);
+			this->trivagologof->Name = L"trivagologof";
+			this->trivagologof->Size = System::Drawing::Size(522, 103);
+			this->trivagologof->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->trivagologof->TabIndex = 0;
+			this->trivagologof->TabStop = false;
+			this->trivagologof->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
 			// 
 			// textBox1
 			// 
@@ -96,11 +101,11 @@ namespace Project18 {
 			// label2
 			// 
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Tahoma", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(294, 198);
+			this->label2->Location = System::Drawing::Point(285, 198);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(93, 35);
+			this->label2->Size = System::Drawing::Size(102, 35);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Username";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -109,7 +114,7 @@ namespace Project18 {
 			// label3
 			// 
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Tahoma", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(294, 238);
 			this->label3->Name = L"label3";
@@ -129,20 +134,21 @@ namespace Project18 {
 			this->textBox2->TabIndex = 4;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
 			// 
-			// button1
+			// LoginButton
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+			this->LoginButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
 				static_cast<System::Int32>(static_cast<System::Byte>(96)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Tahoma", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->LoginButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->LoginButton->Font = (gcnew System::Drawing::Font(L"Tahoma", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(436, 285);
-			this->button1->Margin = System::Windows::Forms::Padding(0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(92, 38);
-			this->button1->TabIndex = 6;
-			this->button1->Text = L"Login";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->LoginButton->Location = System::Drawing::Point(419, 285);
+			this->LoginButton->Margin = System::Windows::Forms::Padding(0);
+			this->LoginButton->Name = L"LoginButton";
+			this->LoginButton->Size = System::Drawing::Size(92, 38);
+			this->LoginButton->TabIndex = 6;
+			this->LoginButton->Text = L"Login";
+			this->LoginButton->UseVisualStyleBackColor = false;
+			this->LoginButton->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// Admin
 			// 
@@ -166,16 +172,19 @@ namespace Project18 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(914, 450);
 			this->Controls->Add(this->Admin);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->LoginButton);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->trivagologof);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"Login Page";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trivagologof))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
