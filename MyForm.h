@@ -200,11 +200,15 @@ namespace Project18 {
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if (textBox1->Text != "" && textBox2->Text != ""){
 				MyForm1^ frm = gcnew MyForm1();
 				MyForm^ frm2 = gcnew MyForm();
-
-			 frm->Show();
-			 this->Hide();
+				frm->Show();
+				this->Hide();
+			 }
+			 else {
+				 MessageBox::Show("Invalid Input");
+			 }
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 }
