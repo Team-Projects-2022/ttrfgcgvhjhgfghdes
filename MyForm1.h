@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Availables.h"
 namespace Project18 {
 
 	using namespace System;
@@ -126,6 +126,7 @@ namespace Project18 {
 			this->EndDateCal->Name = L"EndDateCal";
 			this->EndDateCal->Size = System::Drawing::Size(281, 27);
 			this->EndDateCal->TabIndex = 3;
+			this->EndDateCal->ValueChanged += gcnew System::EventHandler(this, &MyForm1::EndDateCal_ValueChanged);
 			// 
 			// StDateLabel
 			// 
@@ -197,8 +198,25 @@ namespace Project18 {
 	private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 if (EndDateCal->Value < StDateCal->Value){
+					 MessageBox::Show("Invalid Date");
+				 }
+				 if (CountryMenu->Text == "Country"){
+					 MessageBox::Show("Invalid Country");
+
+				 }
+				 else{
+					 Availables^ frm = gcnew Availables();
+					// MyForm^ frm2 = gcnew MyForm();
+					 frm->Show();
+					 this->Hide();
+				 }
+
 	}
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void EndDateCal_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+			 
 }
 };
 }
